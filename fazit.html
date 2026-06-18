@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://stahe.github.io/de-java-web3tier-mars-2005/fazit.html">
       
       
-        <link rel="prev" href="artikel-2---beispiele-fur-dreistufige-webarchitekturen.html">
+        <link rel="prev" href="artikel-2---beispiele-fur-dreischichtige-webarchitekturen.html">
       
       
         <link rel="next" href="anhange.html">
@@ -359,14 +359,14 @@
   
   
     <li class="md-nav__item">
-      <a href="artikel-2---beispiele-fur-dreistufige-webarchitekturen.html" class="md-nav__link">
+      <a href="artikel-2---beispiele-fur-dreischichtige-webarchitekturen.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Artikel 2 – Beispiele für dreistufige Webarchitekturen
+    3. Artikel 2 – Beispiele für dreischichtige Webarchitekturen
   
 
     
@@ -461,17 +461,17 @@
 
 
 <h1 id="4-fazit">4. <span style="color: #365f91">Fazit</span></h1>
-<p>Fassen wir zusammen, was wir erreichen wollten. Wir wollten die folgende dreischichtige MVC-Webanwendung erstellen:</p>
+<p>Erinnern wir uns daran, was wir erreichen wollten. Wir wollten die Webanwendung MVC mit den folgenden drei Schichten aufbauen:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000006F3000001EB3885D79F.png" width="680" height="188" style="display:inline-block; margin:4px;width:17.997cm;height:4.967cm;" class="odt-zoomable" data-zoom-src="images/10000000000006F3000001EB3885D79F.png" /></td></tr></table>
 
 <ul>
-  <li>Das Modell war bereits vorhanden. Es wurde von allen drei vorgeschlagenen Lösungen identisch verwendet
+  <li>Das Modell war bereits vorhanden. Es wurde von allen drei vorgeschlagenen Lösungen auf identische Weise verwendet.
   </li>
-  <li>, da die Schichtenunabhängigkeit strikt gewahrt wurde; die [Web-]Schicht konnte auf drei verschiedene Arten implementiert werden, ohne das Modell zu beeinflussen. Wir arbeiteten ausschließlich innerhalb der [Web-]Schicht.
+  <li>Da die Unabhängigkeit der Schichten gewissenhaft gewahrt wurde, konnte die Schicht [web] auf drei verschiedene Arten implementiert werden, ohne das Modell zu verändern. Wir haben ausschließlich in der Schicht [web] gearbeitet.
   </li>
-  <li>Die Lösungen sind ähnlich. Während wir in der ersten Lösung ein einzelnes Servlet mit einer Methode pro zu bearbeitender Aktion hatten, haben wir in den beiden anderen Lösungen ebenfalls ein einzelnes Servlet, das jedoch von den Methoden zur Aktionsverarbeitung befreit ist, wobei die Verarbeitung nun von separaten Klassen übernommen wird. Die Rolle dieser Klassen war identisch mit der der Methoden in der ersten Lösung.
+  <li>Die Lösungen ähneln sich. Während in der ersten Lösung ein einziges Servlet mit einer Methode pro zu bearbeitender Aktion vorhanden war, gibt es in den beiden anderen Lösungen ebenfalls ein einziges Servlet, das jedoch von den Methoden zur Bearbeitung der Aktionen befreit ist; diese Bearbeitung wird nun von separaten Klassen übernommen. Die Rolle dieser Klassen entsprach derjenigen der Methoden in der ersten Lösung.
   </li>
-  <li>Der Einsatz von [Spring] in dieser Anwendung ermöglicht es uns, die Klassen auszuwählen, die die Java-Schnittstellen der [Domain]- und [DAO]-Schichten implementieren. Diese Implementierungsklassen könnten innerhalb einer Schicht geändert werden, ohne dass dies Auswirkungen auf die anderen Schichten hätte. Es müsste lediglich die Spring-Konfigurationsdatei geändert werden. Somit könnte die [DAO]-Schicht, die derzeit vom [sqlMap]-Tool verwaltet wird, vom [Hibernate]-Tool verwaltet werden. Dies würde sich auf die [DAO]-Schicht auswirken, hätte jedoch keine Auswirkungen auf die [Web]- und [Domain]-Schichten.
+  <li>Die Verwendung von [Spring] in dieser Anwendung lässt uns die Wahl der Implementierungsklassen für die Java-Schnittstellen der Schichten [domain] und [dao]. Diese Implementierungsklassen könnten in einer Schicht geändert werden, ohne dass dies Auswirkungen auf die anderen Schichten hätte. Es müsste lediglich die Spring-Konfigurationsdatei geändert werden. So könnte die hier durch das Tool [sqlMap] bereitgestellte Schicht [dao] durch das Tool [Hibernate] bereitgestellt werden. Dies hätte Auswirkungen auf die Schicht [dao], jedoch keinerlei Auswirkungen auf die Schichten [web] und [domain].
   </li>
 </ul>
 
